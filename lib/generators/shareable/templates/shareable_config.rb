@@ -78,4 +78,9 @@ Shareable.configure do |config|
   #config.post_description = nil
   #config.image_link = nil
   #config.noparse = nil
+
+  ###############
+  #odnoklassniki
+  ###############
+  #config.site_url = ''
 end

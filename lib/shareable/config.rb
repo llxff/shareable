@@ -19,11 +19,12 @@ module Shareable
                     :onstartinteraction, :onendinteraction, :pin_config, :pin_do, :media, :color,
                     :bordercolor, :btnsrc, :via, :text, :related, :count, :lang, :counturl, :hashtags, :size, :dnt,
                     :type, :styled, :newwindow, :description, :counter, :onsuccess, :onerror, :showzero,
-                    :recommendations, :points, :js_enabled, :page_url, :link_title, :post_title, :post_description, :image_link, :noparse
+                    :recommendations, :points, :js_enabled, :page_url, :link_title, :post_title, :post_description,
+                    :image_link, :noparse, :site_url
   end
 
   configure do |config|
-    config.names = %w[ twitter facebook linkedin pinterest google_plus reddit vkontakte ]
+    config.names = %w[ twitter facebook linkedin pinterest google_plus reddit vkontakte odnoklassniki ]
 
     ##############
     #facebook
@@ -102,5 +103,10 @@ module Shareable
     config.post_description = nil
     config.image_link = nil
     config.noparse = nil
+
+    ###############
+    #odnoklassniki
+    ###############
+    config.site_url = ''
   end
 end
