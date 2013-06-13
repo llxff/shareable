@@ -46,7 +46,8 @@ module Shareable
         button_settings.compact!
 
         if button_settings.present?
-          locals[:share_button_settings] = "{ #{button_settings.join(',')} }"
+          locals[:options] ||= {}
+          locals[:options][:share_button_settings] = "{ #{button_settings.join(',')} }"
         end
 
         super locals
