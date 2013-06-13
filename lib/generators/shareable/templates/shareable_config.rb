@@ -67,4 +67,15 @@ Shareable.configure do |config|
   #config.hashtags=''
   #config.size='medium'
   #config.dnt=''
+
+  ##############
+  #vkontakte
+  ##############
+  #config.js_enabled = true
+  #config.page_url = nil
+  #config.link_title = 'Поделиться ВКонтакте'
+  #config.post_title = nil
+  #config.post_description = nil
+  #config.image_link = nil
+  #config.noparse = nil
 end

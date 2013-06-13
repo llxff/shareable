@@ -23,7 +23,7 @@ module Shareable
   end
 
   configure do |config|
-    config.names = %w[ twitter facebook linkedin pinterest google_plus reddit ]
+    config.names = %w[ twitter facebook linkedin pinterest google_plus reddit vkontakte ]
 
     ##############
     #facebook
@@ -91,5 +91,16 @@ module Shareable
     config.hashtags=''
     config.size='medium'
     config.dnt=''
+
+    ##############
+    #vkontakte
+    ##############
+    config.js_enabled = true
+    config.page_url = nil
+    config.link_title = 'Поделиться ВКонтакте'
+    config.post_title = nil
+    config.post_description = nil
+    config.image_link = nil
+    config.noparse = nil
   end
 end
