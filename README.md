@@ -7,6 +7,8 @@ A simple and unobtrusive gem for adding social link sharing to your Rails app. S
   - Reddit
   - Linkedin
   - Google Plus
+  - Vkontakte
+  - Odnoklassniki
 
 Install
 --------
