@@ -1,5 +1,3 @@
-require 'active_support/core_ext/object/blank.rb'
-
 module Shareable
   module Helpers
     class Tag
