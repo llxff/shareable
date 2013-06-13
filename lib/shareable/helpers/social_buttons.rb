@@ -9,7 +9,7 @@ module Shareable
     class SocialButtons < Tag
       include ::ActionView::Context
       cattr_accessor :buttons
-      self.buttons = %w[ twitter facebook pinterest reddit google_plus linkedin ]
+      self.buttons = %w[ twitter facebook pinterest reddit google_plus linkedin vkontakte ]
 
       #not very DRY. Refactor.
       cattr_accessor :config_options
@@ -19,7 +19,8 @@ module Shareable
       :linkedin => [ :counter, :onsuccess, :onerror, :showzero ],
       :pinterest => [ :pin_config, :pin_do, :title, :alt, :media, :description ],
       :reddit => [ :title, :target, :color, :bordercolor, :type, :styled, :newwindow, :btnsrc, :points ],
-      :twitter => [ :via, :text, :related, :count, :lang, :counturl, :hashtags, :size, :dnt ]}
+      :twitter => [ :via, :text, :related, :count, :lang, :counturl, :hashtags, :size, :dnt ],
+      :vkontakte => [ :js_enabled, :page_url, :link_title, :post_title, :post_description, :image_link, :noparse ]}
 
       def initialize(template, options) #:nodoc:
         @template, @options = template, options

@@ -1,0 +1,12 @@
+<% if options[:js_enabled] %>
+    <%= output_once :vkontakte do %>
+        <script type="text/javascript" src="http://vkontakte.ru/js/api/share.js?9" charset="windows-1251"></script>
+    <% end %>
+    <script type="text/javascript">
+        <!--
+        document.write(VK.Share.button(<%= options[:share_button_settings] %>));
+        -->
+    </script>
+<% else %>
+    <a href="http://vkontakte.ru/share.php?url=<%= options[:js_enabled] %>" target="_blank"><%= options[:link_title] %></a>
+<% end %>

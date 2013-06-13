@@ -1,3 +1,5 @@
+require 'active_support/core_ext/object/blank.rb'
+
 module Shareable
   module Helpers
     class Tag
@@ -32,6 +34,57 @@ module Shareable
     end
 
     class Linkedin < Socialize
+    end
+
+    class Vkontakte < Socialize
+      def to_s(locals={})
+        button_settings = []
+        button_settings << add_url
+        button_settings << add_title
+        button_settings << add_description
+        button_settings << add_image_link
+        button_settings << add_noparse_opt
+
+        button_settings.compact!
+
+        if button_settings.present?
+          locals[:share_button_settings] = "{ #{button_settings.join(',')} }"
+        end
+
+        super locals
+      end
+
+    protected
+
+      def add_url
+        if @options[:page_url]
+          "url: '#{@options[:page_url]}'"
+        end
+      end
+
+      def add_title
+        if @options[:post_title]
+          "title: '#{@options[:post_title]}'"
+        end
+      end
+
+      def add_description
+        if @options[:post_description]
+          "description: '#{@options[:post_description]}'"
+        end
+      end
+
+      def add_image_link
+        if @options[:image_link]
+          "image: '#{@options[:image_link]}'"
+        end
+      end
+
+      def add_noparse_opt
+        if @options[:noparse].is_a?(TrueClass) || @options.is_a?(FalseClass)
+          "noparse: #{@options[:noparse]}"
+        end
+      end
     end
 
     class Pinterest < Socialize
