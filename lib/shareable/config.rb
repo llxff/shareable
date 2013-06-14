@@ -20,11 +20,11 @@ module Shareable
                     :bordercolor, :btnsrc, :via, :text, :related, :count, :lang, :counturl, :hashtags, :size, :dnt,
                     :type, :styled, :newwindow, :description, :counter, :onsuccess, :onerror, :showzero,
                     :recommendations, :points, :js_enabled, :page_url, :link_title, :post_title, :post_description,
-                    :image_link, :noparse, :site_url
+                    :image_link, :noparse, :site_url, :choosen_socials
   end
 
   configure do |config|
-    config.names = %w[ twitter facebook linkedin pinterest google_plus reddit vkontakte odnoklassniki ]
+    config.names = %w[ twitter facebook linkedin pinterest google_plus reddit vkontakte odnoklassniki, yandex ]
 
     ##############
     #facebook
@@ -108,5 +108,10 @@ module Shareable
     #odnoklassniki
     ###############
     config.site_url = ''
+
+    ###############
+    #yandex
+    ###############
+    config.choosen_socials = %w[ yaru, vkontakte, facebook, twitter, odnoklassniki, moimir, lj, friendfeed, moikrug, gplus, surfingbird ]
   end
 end

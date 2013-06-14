@@ -88,6 +88,9 @@ module Shareable
     class Odnoklassniki < Socialize
     end
 
+    class Yandex < Socialize
+    end
+
     class Pinterest < Socialize
       def to_s(locals={}) #:nodoc:
         locals[:options] ||= {}

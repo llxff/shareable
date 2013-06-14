@@ -83,4 +83,9 @@ Shareable.configure do |config|
   #odnoklassniki
   ###############
   #config.site_url = ''
+
+  ###############
+  #yandex
+  ###############
+  #config.choosen_socials = %w[ yaru, vkontakte, facebook, twitter, odnoklassniki, moimir, lj, friendfeed, moikrug, gplus, surfingbird ]
 end
