@@ -4,7 +4,7 @@
     <% end %>
     <script type="text/javascript">
         <!--
-        document.write(VK.Share.button(<%= options[:share_button_settings] %>));
+        document.write(VK.Share.button(<%= options[:share_button_settings].html_safe %>));
         -->
     </script>
 <% else %>
